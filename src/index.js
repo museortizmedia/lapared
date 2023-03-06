@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './Pages/App';
 import reportWebVitals from './reportWebVitals';
+import { FireProvider } from './firebase/fireContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <FireProvider>
   <React.StrictMode>
     <App />
   </React.StrictMode>
+  </FireProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
